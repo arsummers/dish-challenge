@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import ListView
+from .models import Dish
 
-def index(request):
-    return HttpResponse('Hello, world. The dish list will go here')
+class HomePageView(ListView):
+    model = Dish
+    template_name = 'home.html'
