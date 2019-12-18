@@ -11,3 +11,6 @@ class Dish(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     dish_description = models.CharField(max_length=100)
     other_dish_text = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.dish_description
