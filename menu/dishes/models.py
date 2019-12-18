@@ -1,12 +1,12 @@
 from django.db import models
-import views
+
 
 # The dish description is intended as a short description of the dish, or the name of the dish.
 # The other dish text field is intended for optional longer descriptions of the dishes.
 # The price is able to take up to $9999.00
 
 class Dish(models.Model):
-    img = models.ImageField(upload_to=views.index)
+    img = models.ImageField(upload_to='images/')
     restaurant_name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     dish_description = models.CharField(max_length=100)
