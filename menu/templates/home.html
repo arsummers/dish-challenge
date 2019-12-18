@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dishes</title>
     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dishes/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'dishes/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'dishes/layout.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'dishes/modules.css' %}">
 
 </head>
-<body>
+<body class="grid-container">
     <ul>
         {% for dish in object_list %}
             <h2>{{ dish.dish_description }}</h2>

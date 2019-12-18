@@ -1,3 +1,20 @@
-h2{
-    color: red;
+/* restaurant name and other dishes are hidden on smaller plates */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'fishimg fishimg fishdesc'
+    'fishimg fishimg fishrest'
+    'fishimg fishimg fishtext'
+    'tacoimg tacoimg tacoprice'
+    'tacoimg tacoimg tacodesc'
+    'tacoimg tacoimg tacorest'
+    'tacoimg tacoimg tacotext'
+    'tacoimg tacoimg tacoprice'
+    'saladimg saladdesc bowlimg bowldesc'
+    'saladimg saladprice bowlimg bowlprice'
+    'flatbreadimg flatbreaddesc chickenimg chickendesc'
+    'flatbreadimg flatbreadprice chickenimg chickenprice'
+    'friesimg friesdesc donutimg donutdesc'
+    'friesimg friesprice donutimg donutprice'
+    ;
 }
