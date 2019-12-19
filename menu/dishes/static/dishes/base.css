@@ -9,6 +9,8 @@ ul{
     max-width: 500px;
 }
 
+/* text set to hide if it overflows box to emulate given picture */
 h2{
     white-space: nowrap;
+    overflow: hidden;
 }

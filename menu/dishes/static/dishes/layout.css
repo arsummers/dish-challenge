@@ -1,22 +1,27 @@
 /* restaurant name and other dishes are hidden on smaller plates */
 /* Hello from the CSS! This is remarkably repetitive. Given more instruction, I would love to learn how to programmatically generate placement for these items, rather than having each one hard-coded in place like I do now. */
-/* My apologies ahead of time for the block of text that is the grid container. In order to preserve the ratios on the image I was given to replicate, I needed to have 12 columns. The first two images are intended to take of 2/3 of the horizontal space, while the last six are meant to take up approximately a quarter. */
+/* My apologies ahead of time for the block of text that is the grid container. In order to preserve the ratios on the image I was given to replicate, I needed to have 12 columns. The first two images are intended to take of 2/3 of the horizontal space, while the last six are meant to take up approximately a quarter each. */
 .grid-container{
     display: grid;
     grid-template-areas: 
     'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishdesc fishdesc fishdesc fishdesc'
     'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishrest fishrest fishrest fishrest'
     'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishtext fishtext fishtext fishtext'
+    'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishrule fishrule fishrule fishrule'
     'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishprice fishprice fishprice fishprice'
     'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladdesc saladdesc saladdesc saladdesc'
     'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladrest saladrest saladrest saladrest'
     'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladtext saladtext saladtext saladtext'
+    'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladrule saladrule saladrule saladrule'
     'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladprice saladprice saladprice saladprice'
     'tacoimg tacoimg tacoimg tacodesc tacodesc tacodesc bowlimg bowlimg bowlimg bowldesc bowldesc bowldesc'
+    'tacoimg tacoimg tacoimg tacorule tacorule tacorule bowlimg bowlimg bowlimg bowlrule bowlrule bowlrule'
     'tacoimg tacoimg tacoimg tacoprice tacoprice tacoprice bowlimg bowlimg bowlimg bowlprice bowlprice bowlprice'
     'flatbreadimg flatbreadimg flatbreadimg flatbreaddesc flatbreaddesc flatbreaddesc chickenimg chickenimg chickenimg  chickendesc chickendesc chickendesc'
+    'flatbreadimg flatbreadimg flatbreadimg flatbreadrule flatbreadrule flatbreadrule chickenimg chickenimg chickenimg chickenrule chickenrule chickenrule'
     'flatbreadimg flatbreadimg flatbreadimg flatbreadprice flatbreadprice flatbreadprice chickenimg chickenimg chickenimg chickenprice chickenprice chickenprice'
     'friesimg friesimg friesimg friesdesc friesdesc friesdesc donutimg donutimg donutimg donutdesc donutdesc donutdesc'
+    'friesimg friesimg friesimg friesrule friesrule friesrule donutimg donutimg donutimg donutrule donutrule donutrule'
     'friesimg friesimg friesimg friesprice friesprice friesprice donutimg donutimg donutimg donutprice donutprice donutprice'
     ;
 }
@@ -30,6 +35,9 @@ h2:nth-of-type(1){
 }
 h3:nth-of-type(1){
     grid-area: fishrest;
+}
+div:nth-of-type(1){
+    grid-area: fishrule;
 }
 h4:nth-of-type(1){
     grid-area: fishprice;
@@ -48,6 +56,9 @@ h2:nth-of-type(2){
 h3:nth-of-type(2){
     grid-area: saladrest;
 }
+div:nth-of-type(2){
+    grid-area: saladrule;
+}
 h4:nth-of-type(2){
     grid-area: saladprice;
 }
@@ -62,9 +73,13 @@ img:nth-of-type(3){
 h2:nth-of-type(3){
     grid-area: tacodesc;
 }
+div:nth-of-type(3){
+    grid-area: tacorule;
+}
 h4:nth-of-type(3){
     grid-area: tacoprice;
 }
+
 
 img:nth-of-type(4){
     grid-area: bowlimg;
@@ -72,49 +87,66 @@ img:nth-of-type(4){
 h2:nth-of-type(4){
     grid-area: bowldesc;
 }
+div:nth-of-type(4){
+    grid-area: bowlrule;
+}
 h4:nth-of-type(4){
     grid-area: bowlprice;
 }
 
 img:nth-of-type(5){
-    grid-area: flatbreadimg;
-}
-h2:nth-of-type(5){
-    grid-area: flatbreaddesc;
-}
-h4:nth-of-type(5){
-    grid-area: flatbreadprice;
-}
-
-img:nth-of-type(6){
     grid-area: chickenimg;
 }
-h2:nth-of-type(6){
+h2:nth-of-type(5){
     grid-area: chickendesc;
 }
-h4:nth-of-type(6){
+div:nth-of-type(5){
+    grid-area: chickenrule;
+}
+h4:nth-of-type(5){
     grid-area: chickenprice;
 }
 
-img:nth-of-type(7){
+
+img:nth-of-type(6){
     grid-area: friesimg;
 }
-h2:nth-of-type(7){
+h2:nth-of-type(6){
     grid-area: friesdesc;
 }
-h4:nth-of-type(7){
+div:nth-of-type(6){
+    grid-area: friesrule;
+}
+h4:nth-of-type(6){
     grid-area: friesprice;
 }
 
-img:nth-of-type(8){
+img:nth-of-type(7){
     grid-area: donutimg;
 }
-h2:nth-of-type(8){
+h2:nth-of-type(7){
     grid-area: donutdesc;
 }
-h4:nth-of-type(8){
+div:nth-of-type(7){
+    grid-area: donutrule;
+}
+h4:nth-of-type(7){
     grid-area: donutprice;
 }
+
+img:nth-of-type(8){
+    grid-area: flatbreadimg;
+}
+h2:nth-of-type(8){
+    grid-area: flatbreaddesc;
+}
+div:nth-of-type(8){
+    grid-area: flatbreadrule;
+}
+h4:nth-of-type(8){
+    grid-area: flatbreadprice;
+}
+
 
 /* END GRID SECTION */
 
