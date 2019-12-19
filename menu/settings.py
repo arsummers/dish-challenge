@@ -26,7 +26,9 @@ SECRET_KEY = 'ey5injqayq^!k3-83^16o^^9=^50z2f160fi9eb+v=0j_qu6ss'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'as-dishes-challenge.herokuapp.com'
+]
 
 
 # Application definition
