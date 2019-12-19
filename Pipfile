@@ -10,6 +10,9 @@ imgkit = "*"
 django = "*"
 psycopg2-binary = "*"
 pillow = "*"
+gunicorn = "*"
+whitenoise = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.7"
