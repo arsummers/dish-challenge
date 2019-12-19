@@ -27,7 +27,9 @@ SECRET_KEY = 'ey5injqayq^!k3-83^16o^^9=^50z2f160fi9eb+v=0j_qu6ss'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'as-dishes-challenge.herokuapp.com'
+    'as-dishes-challenge.herokuapp.com',
+    '127.0.0.1',
+    'localhost'
 ]
 
 
