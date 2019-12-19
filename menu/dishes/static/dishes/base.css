@@ -8,3 +8,8 @@ h2{
 h3:nth-of-type(n+3), p:nth-of-type(n+3){
     display: none;
 }
+
+ul{
+    max-width: 500px;
+}
+
