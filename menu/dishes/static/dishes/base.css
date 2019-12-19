@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-h2{
-    font-family: 'Raleway', sans-serif;
-}
-
 /* hides unused elements for smaller dishes */
 h3:nth-of-type(n+3), p:nth-of-type(n+3){
     display: none;
+}
+
+ul{
+    max-width: 500px;
+}
+
+h2{
+    white-space: nowrap;
 }

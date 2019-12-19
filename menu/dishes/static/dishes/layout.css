@@ -1,21 +1,23 @@
 /* restaurant name and other dishes are hidden on smaller plates */
+/* Hello from the CSS! This is remarkably repetitive. Given more instruction, I would love to learn how to programmatically generate placement for these items, rather than having each one hard-coded in place like I do now. */
+/* My apologies ahead of time for the block of text that is the grid container. In order to preserve the ratios on the image I was given to replicate, I needed to have 12 columns. The first two images are intended to take of 2/3 of the horizontal space, while the last six are meant to take up approximately a quarter. */
 .grid-container{
     display: grid;
     grid-template-areas: 
-    'fishimg fishimg fishdesc fishdesc'
-    'fishimg fishimg fishrest fishrest'
-    'fishimg fishimg fishtext fishtext'
-    'fishimg fishimg fishprice fishprice'
-    'saladimg saladimg saladdesc saladdesc'
-    'saladimg saladimg saladrest saladrest'
-    'saladimg saladimg saladtext saladtext'
-    'saladimg saladimg saladprice saladprice'
-    'tacoimg tacodesc bowlimg bowldesc'
-    'tacoimg tacoprice bowlimg bowlprice'
-    'flatbreadimg flatbreaddesc chickenimg chickendesc'
-    'flatbreadimg flatbreadprice chickenimg chickenprice'
-    'friesimg friesdesc donutimg donutdesc'
-    'friesimg friesprice donutimg donutprice'
+    'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishdesc fishdesc fishdesc fishdesc'
+    'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishrest fishrest fishrest fishrest'
+    'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishtext fishtext fishtext fishtext'
+    'fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishimg fishprice fishprice fishprice fishprice'
+    'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladdesc saladdesc saladdesc saladdesc'
+    'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladrest saladrest saladrest saladrest'
+    'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladtext saladtext saladtext saladtext'
+    'saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladimg saladprice saladprice saladprice saladprice'
+    'tacoimg tacoimg tacoimg tacodesc tacodesc tacodesc bowlimg bowlimg bowlimg bowldesc bowldesc bowldesc'
+    'tacoimg tacoimg tacoimg tacoprice tacoprice tacoprice bowlimg bowlimg bowlimg bowlprice bowlprice bowlprice'
+    'flatbreadimg flatbreadimg flatbreadimg flatbreaddesc flatbreaddesc flatbreaddesc chickenimg chickenimg chickenimg  chickendesc chickendesc chickendesc'
+    'flatbreadimg flatbreadimg flatbreadimg flatbreadprice flatbreadprice flatbreadprice chickenimg chickenimg chickenimg chickenprice chickenprice chickenprice'
+    'friesimg friesimg friesimg friesdesc friesdesc friesdesc donutimg donutimg donutimg donutdesc donutdesc donutdesc'
+    'friesimg friesimg friesimg friesprice friesprice friesprice donutimg donutimg donutimg donutprice donutprice donutprice'
     ;
 }
 
@@ -112,4 +114,33 @@ h2:nth-of-type(8){
 }
 h4:nth-of-type(8){
     grid-area: donutprice;
+}
+
+/* END GRID SECTION */
+
+img:nth-of-type(2), h4:nth-of-type(2){
+    margin-bottom: 20px;
+}
+
+/* sets element sizes */
+
+/* takes care of the two big images */
+img:nth-of-type(-n+2){
+    height: 163px;
+    width: 325px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+/* takes care of the four smaller images */
+img:nth-of-type(n+3){
+    height: 80px;
+    width: 110px;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+
+h2:nth-of-type(n+3), h4:nth-of-type(n+3){
+    margin-right: 15px;
 }
