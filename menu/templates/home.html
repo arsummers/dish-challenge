@@ -12,14 +12,14 @@
     <link rel="stylesheet" type="text/css" href="{% static 'dishes/modules.css' %}">
 
 </head>
-<body class="grid-container">
-    <ul>
+<body>
+    <ul class="grid-container">
         {% for dish in object_list %}
-            <h2>{{ dish.dish_description }}</h2>
-            <img src="{{ dish.img.url }}" alt="{{ dish.other_dish_text }}">
-            <h3 class="rest">{{ dish.restaurant_name }}</h2>
-            <h4>${{ dish.price }}</h3>
-            <p>{{ dish.other_dish_text }}</p>
+                <h2>{{ dish.dish_description }}</h2>
+                <img src="{{ dish.img.url }}" alt="{{ dish.other_dish_text }}">
+                <h3 class="rest">{{ dish.restaurant_name }}</h2>
+                <h4>${{ dish.price }}</h3>
+                <p>{{ dish.other_dish_text }}</p>
         {% endfor %}
     </ul>
 </body>
