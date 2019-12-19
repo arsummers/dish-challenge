@@ -1,3 +1,3 @@
 import imgkit
 
-imgkit.from_url('http://www.google.com', 'google.jpg')
+imgkit.from_url('https://as-dishes-challenge.herokuapp.com/', 'dishmms.jpg')
