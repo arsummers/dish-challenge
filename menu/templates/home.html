@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dishes</title>
     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dishes/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'dishes/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'dishes/layout.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'dishes/modules.css' %}">
 
 </head>
 <body>
-    <ul>
+    <ul class="grid-container">
         {% for dish in object_list %}
-            <h2>{{ dish.dish_description }}</h2>
-            <img src="{{ dish.img.url }}" alt="{{ dish.other_dish_text }}">
-            <h3>{{ dish.restaurant_name }}</h2>
-            <h3>${{ dish.price }}</h3>
-            <p>{{ dish.other_dish_text }}</p>
+                <h2>{{ dish.dish_description }}</h2>
+                <img src="{{ dish.img.url }}" alt="{{ dish.other_dish_text }}">
+                <h3 class="rest">{{ dish.restaurant_name }}</h2>
+                <h4>${{ dish.price }}</h3>
+                <p>{{ dish.other_dish_text }}</p>
         {% endfor %}
     </ul>
 </body>

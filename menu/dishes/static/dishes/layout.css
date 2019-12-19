@@ -1,3 +1,115 @@
-h2{
-    color: red;
+/* restaurant name and other dishes are hidden on smaller plates */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'fishimg fishimg fishdesc fishdesc'
+    'fishimg fishimg fishrest fishrest'
+    'fishimg fishimg fishtext fishtext'
+    'fishimg fishimg fishprice fishprice'
+    'saladimg saladimg saladdesc saladdesc'
+    'saladimg saladimg saladrest saladrest'
+    'saladimg saladimg saladtext saladtext'
+    'saladimg saladimg saladprice saladprice'
+    'tacoimg tacodesc bowlimg bowldesc'
+    'tacoimg tacoprice bowlimg bowlprice'
+    'flatbreadimg flatbreaddesc chickenimg chickendesc'
+    'flatbreadimg flatbreadprice chickenimg chickenprice'
+    'friesimg friesdesc donutimg donutdesc'
+    'friesimg friesprice donutimg donutprice'
+    ;
+}
+
+/* placement for first dish */
+img:nth-of-type(1){
+    grid-area: fishimg;
+}
+h2:nth-of-type(1){
+    grid-area: fishdesc;
+}
+h3:nth-of-type(1){
+    grid-area: fishrest;
+}
+h4:nth-of-type(1){
+    grid-area: fishprice;
+}
+p:nth-of-type(1){
+    grid-area: fishtext;
+}
+
+/* placement for second dish */
+img:nth-of-type(2){
+    grid-area: saladimg;
+}
+h2:nth-of-type(2){
+    grid-area: saladdesc;
+}
+h3:nth-of-type(2){
+    grid-area: saladrest;
+}
+h4:nth-of-type(2){
+    grid-area: saladprice;
+}
+p:nth-of-type(2){
+    grid-area: saladtext;
+}
+
+/* placement for dishes 3 through 8 */
+img:nth-of-type(3){
+    grid-area: tacoimg;
+}
+h2:nth-of-type(3){
+    grid-area: tacodesc;
+}
+h4:nth-of-type(3){
+    grid-area: tacoprice;
+}
+
+img:nth-of-type(4){
+    grid-area: bowlimg;
+}
+h2:nth-of-type(4){
+    grid-area: bowldesc;
+}
+h4:nth-of-type(4){
+    grid-area: bowlprice;
+}
+
+img:nth-of-type(5){
+    grid-area: flatbreadimg;
+}
+h2:nth-of-type(5){
+    grid-area: flatbreaddesc;
+}
+h4:nth-of-type(5){
+    grid-area: flatbreadprice;
+}
+
+img:nth-of-type(6){
+    grid-area: chickenimg;
+}
+h2:nth-of-type(6){
+    grid-area: chickendesc;
+}
+h4:nth-of-type(6){
+    grid-area: chickenprice;
+}
+
+img:nth-of-type(7){
+    grid-area: friesimg;
+}
+h2:nth-of-type(7){
+    grid-area: friesdesc;
+}
+h4:nth-of-type(7){
+    grid-area: friesprice;
+}
+
+img:nth-of-type(8){
+    grid-area: donutimg;
+}
+h2:nth-of-type(8){
+    grid-area: donutdesc;
+}
+h4:nth-of-type(8){
+    grid-area: donutprice;
 }
